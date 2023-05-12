@@ -60,10 +60,26 @@ const menuItems = menuItem
   })
   .join("");
 headerMenuItem.innerHTML = menuItems;
-const h2Element = document.querySelector(".home-text h2  span");
+const spanElementParent = document.querySelector(".home-text h2  span");
 const listCareer = myCareers
   .map((myCareer) => {
-    return myCareer.name;
+    return `<span class="listCareer">${myCareer.name}</span>`;
   })
   .join(" ");
-h2Element.innerHTML = listCareer;
+let slideIndex = 0;
+showSlides();
+function showSlides() {
+  let i;
+  const spanElement = document.getElementsByClassName("listCareer");
+  spanElementParent.innerHTML = listCareer;
+
+  for (i = 0; i < spanElement.length; i++) {
+    spanElement[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > spanElement.length) {
+    slideIndex = 1;
+  }
+  spanElement[slideIndex - 1].style.display = "block";
+  setTimeout(showSlides, 2000);
+}
