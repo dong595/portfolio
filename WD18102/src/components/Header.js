@@ -1,9 +1,10 @@
-import { menuItem } from "../fakeApi";
+import { menuItem } from "../data";
 const Header = () => {
   return `<div class="header-logo">
     <a href="#"><span>8x8</span> Dhip</a>
     </div>
     <div class="header-menu">
+    
     <ul class="menu-item"></ul>
     </div>`;
 };

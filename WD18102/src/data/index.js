@@ -50,4 +50,5 @@ const myCareers = [
     id: 5,
   },
 ];
+
 export { menuItem, myCareers };
