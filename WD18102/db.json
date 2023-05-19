@@ -8,7 +8,55 @@
       "zipCode": 90000,
       "email": "binz2028@gmail.com",
       "phoneNumber": "0978964593",
-      "imgUrl": "./images/IMG_0880.JPG"
+      "imgUrl": "IMG_0880.JPG"
+    }
+  ],
+  "myCv": [
+    {
+      "id": 1,
+      "name": "education"
+    },
+    {
+      "name": "Experiences",
+      "id": 2
+    },
+    {
+      "name": "Skills",
+      "id": 3
+    },
+    {
+      "name": "Awards",
+      "id": 4
+    }
+  ],
+  "Education": [
+    {
+      "id": 1,
+      "name": "Bachelor of Science in Computer Science",
+      "position": "Cambridge University",
+      "year": "2014-2015",
+      "descreption": "A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth."
+    },
+    {
+      "name": "Computer Processing Systems/Computer Software",
+      "descreption": "A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.",
+      "position": "Cambridge University",
+      "year": "2014-2015",
+      "id": 2
+    },
+    {
+      "name": "Diploma in Computer",
+      "descreption": "A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.",
+      "position": "Cambridge University",
+      "year": "2014-2015",
+      "id": 3
+    },
+    {
+      "name": "Art & Creative Director",
+      "descreption": "A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.",
+      "position": "Cambridge University",
+      "year": "2014-2015",
+      "id": 4
     }
   ]
 }

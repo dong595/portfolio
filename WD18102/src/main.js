@@ -4,16 +4,21 @@ import { router, render } from "./utilities";
 import notFound from "./pages/notFound";
 
 const spanElement = document.getElementsByClassName("listCareer");
-const container = document.querySelectorAll(".container");
 const app = document.querySelector("#app");
 function start() {
   renderHeader();
   slideHome();
   renderMenu();
   renderAboutMe();
+  renderListItem();
+  renderListCv();
 }
 start();
 
+function renderHeader() {
+  const header = document.querySelector(".header");
+  header.innerHTML = Header();
+}
 // render header
 function renderAboutMe() {
   const dataAboutMe = "http://localhost:3000/aboutMe";
@@ -24,7 +29,6 @@ function renderAboutMe() {
       const body = data.map((data) => {
         return `<div class="img-info flex justify-center">
         <div class="img">
-          <img src="${data.imgUrl}" alt="">
         </div>
         <div class="info">
           <h2>About Me</h2>
@@ -61,14 +65,56 @@ function renderAboutMe() {
         </div>
             `;
       });
+      console.log(body);
       aboutMe.innerHTML = body.join("");
     });
 }
-function renderHeader() {
-  const header = document.querySelector(".header");
-  header.innerHTML = Header();
+/** render list Cv */
+function renderListCv() {
+  const apiCv = "http://localhost:3000/myCv";
+  const listCv = document.querySelector(" .list");
+  console.log(listCv);
+  fetch(apiCv)
+    .then((res) => res.json())
+    .then((data) => {
+      const result = data
+        .map((item) => {
+          return `<li><a href="">${item.name}</a></li>`;
+        })
+        .join(" ");
+      listCv.innerHTML = result;
+    });
 }
-
+/** render list item */
+function renderListItem() {
+  const apiListItem = "http://localhost:3000/Education";
+  const listItem = document.querySelector(".item-list");
+  console.log(listItem);
+  fetch(apiListItem)
+    .then((res) => res.json())
+    .then((data) => {
+      const result = data
+        .map((item) => {
+          return `<div class="item">
+      <div class="item-body flex justify-center">
+        <div class="item-icon">
+          icon
+          <div></div>
+        </div>
+        <div class="item-text">
+          <p class="item-years">${item.year}</p>
+          <h3 class="item-name">${item.name}</h3>
+          <h4 class="item-position">${item.position}</h4>
+          <span class="item-des"
+            >${item.descreption}</span>
+        </div>
+      </div>
+    </div>`;
+        })
+        .join("");
+      listItem.innerHTML = result;
+    });
+}
 /** not found pages */
 function renderNotFound() {
   router.notFound(() => {

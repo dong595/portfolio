@@ -23,6 +23,7 @@
 body {
   background-color: white;
   margin-top: 85px !important;
+  color: #000000;
 }
 .container {
   background-color: #fff;
@@ -53,18 +54,21 @@ body {
   /* font-weight: 900; */
   padding-top: 1rem;
   padding-bottom: 1rem;
+  font-weight: bold;
 }
 .header-logo a span {
   /* background-color: #fff; */
   color: #fff;
-  padding-right: 10px;
+  text-align: center;
+  margin-right: 5px;
+  margin-left: 3px;
 }
 .header-logo a::after {
   position: absolute;
   top: 50%;
   left: -6px;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 4rem;
+  height: 4rem;
   content: "";
   background: #3e64ff;
   z-index: -1;
@@ -75,8 +79,6 @@ body {
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   border-radius: 50%;
-  width: 50%;
-  height: 160%;
 }
 .header-menu ul li {
   display: inline-block;
@@ -306,11 +308,12 @@ body {
   -webkit-box-shadow: 0px 24px 36px -11px rgba(0, 0, 0, 0.09);
   -moz-box-shadow: 0px 24px 36px -11px rgba(0, 0, 0, 0.09);
   box-shadow: 0px 24px 36px -11px rgba(0, 0, 0, 0.09);
-  font-size: 12px;
+  font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: 600;
-  padding: 20px 25px;
+  width: 10rem;
+  height: 3rem;
   text-decoration: none !important;
   transition: all 0.5s;
   outline: none;
@@ -333,6 +336,85 @@ body {
 }
 .technology img:not(:last-child) {
   margin-right: 20px;
+}
+
+.resume .myCv {
+  width: 20%;
+}
+.resume .myCv .list {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.resume .item-list {
+  width: 80%;
+}
+.resume .myCv .list li {
+  list-style: none !important;
+  padding-bottom: 10px;
+  margin-right: 20px;
+  min-width: 150px;
+}
+.resume .myCv .list li:active a {
+  color: #3e64ff;
+}
+.resume .myCv .list li a {
+  color: #000000;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+.resume .item:not(:first-child) {
+  margin-top: 20px;
+}
+.resume .item .item-title {
+  font-weight: 800;
+  font-size: 30px;
+  color: #3e64ff;
+  margin-bottom: 20px;
+}
+.resume .item .item-icon {
+  width: 4.5rem;
+  height: 4rem;
+  line-height: 20px;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #3e64ff;
+  color: #fff;
+  margin-right: 30px;
+}
+.resume .item-body {
+  border-bottom: 1px solid #999999;
+  padding-bottom: 30px;
+}
+.resume .item-text {
+  width: 100%;
+}
+.resume .item-text .item-years {
+  font-weight: 700;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.6);
+  color: #3e64ff;
+  margin-bottom: 10px;
+}
+.resume .item-text .item-name {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+.resume .item-text .item-position {
+  font-size: 18px;
+  font-weight: 700;
+  color: #000000;
+}
+.resume .item-text .item-des {
+  font-size: 16px;
+  line-height: 1.8;
+  font-weight: 400;
+  color: #999999;
 }
 @media (max-width: 767px) {
   .img-info .img {
