@@ -36,7 +36,7 @@ function renderAboutMe() {
     .then((res) => res.json())
     .then((data) => {
       const body = data.map((data) => {
-        return `<div class="img-info flex justify-center">
+        return `<div class="img-info  flex justify-center">
         <div class="img">
         </div>
         <div class="info">
