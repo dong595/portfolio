@@ -575,10 +575,25 @@ body {
   .footer {
     padding-top: 0 !important;
   }
+  .header-menu {
+    display: none !important;
+  }
+  .header {
+    justify-content: space-between;
+  }
+  .info h2 {
+    text-align: center;
+  }
+  .text {
+    justify-content: space-around;
+  }
 }
 @media (min-width: 1024px) {
   .img-info .img {
     min-width: 482px !important;
+  }
+  .header__menu-icon {
+    display: none;
   }
 }
 @media (min-width: 1280px) {
