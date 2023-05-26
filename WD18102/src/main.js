@@ -1,8 +1,17 @@
 import { myCareers } from "./data";
 import { Header, renderMenu } from "./components/Header";
-import { router, render } from "./utilities";
+import { render } from "./utilities/index";
 import notFound from "./pages/notFound";
+import Navigo from "navigo";
+import education from "./pages/Education";
+import { renderPosts } from "./render/Posts";
+import { renderCategories, categoriesBox } from "./render/categories";
 
+const header = document.querySelector(".header");
+// const router = new Navigo("/", { linksSelector: "a" });
+// router.on("/category/:id", (data) => {
+//   render(() => data, categoriesBox);
+// });
 const spanElement = document.getElementsByClassName("listCareer");
 const app = document.querySelector("#app");
 function start() {
@@ -10,13 +19,13 @@ function start() {
   slideHome();
   renderMenu();
   renderAboutMe();
-  renderListItem();
-  renderListCv();
+  education();
+  renderCategories();
+  renderPosts();
 }
 start();
 
 function renderHeader() {
-  const header = document.querySelector(".header");
   header.innerHTML = Header();
 }
 // render header
@@ -54,67 +63,35 @@ function renderAboutMe() {
             </p>
             <button type="submit" class = "text-btn">Download CV</button>
           </div>
+          
         </div>
+        
       </div>
-      <div class="technology grid-cols-5">
-          <img clas src="./img/partner-1.png.webp" alt="" />
-          <img clas src="./img/partner-2.png.webp" alt="" />
-          <img clas src="./img/partner-3.png.webp" alt="" />
-          <img clas src="./img/partner-4.png.webp" alt="" />
-          <img clas src="./img/partner-5.png.webp" alt="" />
+      <div class="technology">
+          <div class="technology-item">
+            <img src="./img/partner-1.png.webp" alt="" />
+          </div>
+          <div class="technology-item">
+            <img src="./img/partner-2.png.webp" alt="" />
+          </div>
+          <div class="technology-item">
+            <img src="./img/partner-3.png.webp" alt="" />
+          </div>
+          <div class="technology-item">
+            <img src="./img/partner-4.png.webp" alt="" />
+          </div>
+          <div class="technology-item">
+            <img src="./img/partner-5.png.webp" alt="" />
+          </div>
         </div>
+      
             `;
       });
-      console.log(body);
+      // console.log(body);
       aboutMe.innerHTML = body.join("");
     });
 }
-/** render list Cv */
-function renderListCv() {
-  const apiCv = "http://localhost:3000/myCv";
-  const listCv = document.querySelector(" .list");
-  console.log(listCv);
-  fetch(apiCv)
-    .then((res) => res.json())
-    .then((data) => {
-      const result = data
-        .map((item) => {
-          return `<li><a href="">${item.name}</a></li>`;
-        })
-        .join(" ");
-      listCv.innerHTML = result;
-    });
-}
-/** render list item */
-function renderListItem() {
-  const apiListItem = "http://localhost:3000/Education";
-  const listItem = document.querySelector(".item-list");
-  console.log(listItem);
-  fetch(apiListItem)
-    .then((res) => res.json())
-    .then((data) => {
-      const result = data
-        .map((item) => {
-          return `<div class="item">
-      <div class="item-body flex justify-center">
-        <div class="item-icon">
-          icon
-          <div></div>
-        </div>
-        <div class="item-text">
-          <p class="item-years">${item.year}</p>
-          <h3 class="item-name">${item.name}</h3>
-          <h4 class="item-position">${item.position}</h4>
-          <span class="item-des"
-            >${item.descreption}</span>
-        </div>
-      </div>
-    </div>`;
-        })
-        .join("");
-      listItem.innerHTML = result;
-    });
-}
+
 /** not found pages */
 function renderNotFound() {
   router.notFound(() => {
