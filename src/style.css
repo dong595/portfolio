@@ -64,7 +64,7 @@ body {
   color: #fff;
   text-align: center;
   margin-right: 5px;
-  margin-left: 2px;
+  margin-left: 5px;
 }
 .header-logo a::after {
   position: absolute;
