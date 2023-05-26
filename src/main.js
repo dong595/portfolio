@@ -63,9 +63,7 @@ function renderAboutMe() {
             </p>
             <button type="submit" class = "text-btn">Download CV</button>
           </div>
-          
         </div>
-        
       </div>
       <div class="technology grid lg:grid-cols-5 md:grid-cols-3 md:justify-items-center md:items-center h-fit">
           <div class="technology-item">
