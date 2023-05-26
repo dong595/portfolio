@@ -67,7 +67,7 @@ function renderAboutMe() {
         </div>
         
       </div>
-      <div class="technology">
+      <div class="technology grid lg:grid-cols-5 md:grid-cols-3 md:justify-items-center md:items-center h-fit">
           <div class="technology-item">
             <img src="./img/partner-1.png.webp" alt="" />
           </div>
