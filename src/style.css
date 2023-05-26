@@ -572,6 +572,9 @@ body {
   .none {
     display: none !important;
   }
+  .footer {
+    padding-top: 0 !important;
+  }
 }
 @media (min-width: 1024px) {
   .img-info .img {
