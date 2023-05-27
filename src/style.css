@@ -387,8 +387,8 @@ body {
   margin-bottom: 20px;
 }
 .resume .item .item-icon {
-  width: 4.5rem;
-  height: 4rem;
+  width: 120%;
+  height: 120%;
   line-height: 20px;
   font-size: 1.5rem;
   display: flex;
@@ -398,6 +398,7 @@ body {
   background-color: #3e64ff;
   color: #fff;
   margin-right: 30px;
+  flex: 1 ;
 }
 .resume .item-body {
   border-bottom: 1px solid #999999;
@@ -564,14 +565,17 @@ body {
   letter-spacing: 2px;
   color: rgba(255, 255, 255, 0.7);
 }
+@media (max-width: 440px){
+  .resume .item .item-icon{
+    height: 4rem;
+    width: 4rem !important;
+  }
+}
 @media (max-width: 640px) {
   .img-info .img {
     display: none;
   }
-  .resume .item .item-icon{
-    height: 3.5rem;
-    width: 4.2rem !important;
-  }
+
 }
 @media (max-width: 767px) {
   .technology {
