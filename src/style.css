@@ -565,12 +565,7 @@ body {
   letter-spacing: 2px;
   color: rgba(255, 255, 255, 0.7);
 }
-@media (max-width: 440px){
-  .resume .item .item-icon{
-    height: 4rem;
-    width: 4rem !important;
-  }
-}
+
 @media (max-width: 640px) {
   .img-info .img {
     display: none;
