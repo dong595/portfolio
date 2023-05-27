@@ -568,11 +568,16 @@ body {
   .img-info .img {
     display: none;
   }
+  .resume .item .item-icon{
+    height: 3.5rem;
+    width: 4.2rem !important;
+  }
 }
 @media (max-width: 767px) {
   .technology {
     display: none !important;
   }
+
 }
 @media (min-width: 768px) {
   .img-info .img {
