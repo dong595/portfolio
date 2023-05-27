@@ -604,11 +604,14 @@ body {
     width: 100%;
     transition: all .5s;
     background-color: #333;
-    display: flex !important; justify-content: space-between;
     transform : translatey(-100%);
+    position: relative;
   }
-
-
+  .hiddenMenu{
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
   .header {
     justify-content: space-between;
   }
