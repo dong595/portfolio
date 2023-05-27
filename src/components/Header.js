@@ -1,4 +1,5 @@
 import { menuItem } from "../data";
+
 const Header = () => {
   return `<div class="header-logo">
     <a href="#"><span>8x8</span> Dhip</a>
@@ -6,6 +7,8 @@ const Header = () => {
     <div class="header-menu">
     
     <ul class="menu-item"></ul>
+    <div class="hiddenMenu text-3xl">&#9874;</div>
+
     </div>
     <div class="header__menu-icon text-3xl">&#9776;</div>
     `;
