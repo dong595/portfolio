@@ -28,6 +28,31 @@ start();
 function renderHeader() {
   header.innerHTML = Header();
 }
+function menuBar() {
+  const menuBar = document.querySelector(".header__menu-icon");
+  const headerMenu = document.querySelector(".header-menu");
+  headerMenu.style.transition = "all .5s";
+  menuBar.addEventListener("click", (e) => {
+    const headerLogo = document.querySelector(".header-logo");
+    const menuHidden = document.querySelector(".hiddenMenu");
+    const header = document.querySelector(".header");
+
+    header.style.padding = "0";
+    headerMenu.style.display = "block";
+    headerMenu.style.marginTop = "auto";
+    headerMenu.style.transform = "translatey(0)";
+    menuHidden.style.display = "block";
+    menuBar.style.display = "none";
+    headerLogo.style.display = "none";
+    menuHidden.addEventListener("click", () => {
+      headerMenu.style.transform = "translatey(-100%)";
+      menuBar.style.display = "block";
+      headerLogo.style.display = "block";
+      header.style.padding = "15px";
+      headerMenu.style.marginTop = "0";
+    });
+  });
+}
 // render header
 function renderAboutMe() {
   const dataAboutMe = "http://localhost:3000/aboutMe";
