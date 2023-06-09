@@ -1,21 +1,20 @@
 import { postContainer } from "../utilities/index";
-const education = () => {
-  const apiEducation = "http://localhost:3000/Education";
-  fetch(apiEducation)
-    .then((response) => response.json())
-    .then((datas) => {
-      // Destructure the data array to get individual post objects
-      // Use the destructured values to render the first post's education and experience
 
+const experience = () => {
+  const apiExperience = "http://localhost:3000/Experience";
+
+  fetch(apiExperience)
+    .then((res) => res.json())
+    .then((datas) => {
       postContainer.innerHTML = `
-      <h4>Education</h4> 
+      <h4>Experience</h4>
         ${datas
           .map((data) => {
             return `
             <div class="item">
             <div class="item-body flex justify-center">
               <div class="item-icon text-5xl">
-              <i class="fa fa-server" style="font-size: 2.5rem"></i>
+                <i class="fa fa-globe" style="font-size: 36px"></i>
                 <div></div>
               </div>
               <div class="item-text">
@@ -33,7 +32,7 @@ const education = () => {
           })
           .join(" ")}
       `;
-      // Use the rest of the posts to render a list
     });
 };
-export default education;
+
+export default experience;

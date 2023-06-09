@@ -1,17 +1,23 @@
 import { myCareers } from "./data";
 import { Header, renderMenu } from "./components/Header";
-import { render } from "./utilities/index";
+import { render } from "./lib/index";
 import notFound from "./pages/notFound";
 import Navigo from "navigo";
 import education from "./pages/Education";
-import { renderPosts } from "./render/Posts";
-import { renderCategories, categoriesBox } from "./render/categories";
+import experience from "./pages/Experience";
+import {
+  renderCategories,
+  categoriesBox,
+  categories,
+} from "./render/categories";
+import { postContainer } from "./utilities";
+import Awards from "./pages/Awards";
 
 const header = document.querySelector(".header");
-// const router = new Navigo("/", { linksSelector: "a" });
-// router.on("/category/:id", (data) => {
-//   render(() => data, categoriesBox);
-// });
+const router = new Navigo("/", { linksSelector: "a" });
+router.on("/education", () => render(education, postContainer));
+router.on("/experiences", () => render(experience, postContainer));
+router.on("/awards", () => render(Awards, postContainer));
 const spanElement = document.getElementsByClassName("listCareer");
 const app = document.querySelector("#app");
 function start() {
@@ -19,9 +25,11 @@ function start() {
   slideHome();
   renderMenu();
   renderAboutMe();
-  education();
   renderCategories();
-  renderPosts();
+  menuBar();
+  education();
+  experience();
+  Awards();
 }
 start();
 
@@ -31,12 +39,13 @@ function renderHeader() {
 function menuBar() {
   const menuBar = document.querySelector(".header__menu-icon");
   const headerMenu = document.querySelector(".header-menu");
-  headerMenu.style.transition = "all .5s";
-  menuBar.addEventListener("click", (e) => {
-    const headerLogo = document.querySelector(".header-logo");
-    const menuHidden = document.querySelector(".hiddenMenu");
-    const header = document.querySelector(".header");
+  const headerLogo = document.querySelector(".header-logo");
+  const menuHidden = document.querySelector(".hiddenMenu");
+  const header = document.querySelector(".header");
 
+  headerMenu.classList.add("transition");
+
+  menuBar.addEventListener("click", () => {
     header.style.padding = "0";
     headerMenu.style.display = "block";
     headerMenu.style.marginTop = "auto";
@@ -44,13 +53,16 @@ function menuBar() {
     menuHidden.style.display = "block";
     menuBar.style.display = "none";
     headerLogo.style.display = "none";
-    menuHidden.addEventListener("click", () => {
+  });
+
+  document.addEventListener("click", (e) => {
+    if (e.target === menuHidden) {
       headerMenu.style.transform = "translatey(-100%)";
       menuBar.style.display = "block";
       headerLogo.style.display = "block";
       header.style.padding = "15px";
       headerMenu.style.marginTop = "0";
-    });
+    }
   });
 }
 // render header
@@ -90,24 +102,6 @@ function renderAboutMe() {
           </div>
         </div>
       </div>
-      <div class="technology grid lg:grid-cols-5 md:grid-cols-3 md:justify-items-center md:items-center h-fit">
-          <div class="technology-item">
-            <img src="./img/partner-1.png.webp" alt="" />
-          </div>
-          <div class="technology-item">
-            <img src="./img/partner-2.png.webp" alt="" />
-          </div>
-          <div class="technology-item">
-            <img src="./img/partner-3.png.webp" alt="" />
-          </div>
-          <div class="technology-item">
-            <img src="./img/partner-4.png.webp" alt="" />
-          </div>
-          <div class="technology-item">
-            <img src="./img/partner-5.png.webp" alt="" />
-          </div>
-        </div>
-      
             `;
       });
       // console.log(body);

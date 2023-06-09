@@ -17,7 +17,7 @@ function renderMenu() {
   const headerMenuItem = document.querySelector(".menu-item");
   const menuItems = menuItem
     .map((item) => {
-      return `<li class="data-menu-${item.id} "><a class="active" src"#"><span>${item.name}</span></a></li>`;
+      return `<li data-menu='${item.id}' ><a class="active" src"#"><span>${item.name}</span></a></li>`;
     })
     .join("");
   headerMenuItem.innerHTML = menuItems;
