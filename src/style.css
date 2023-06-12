@@ -87,9 +87,6 @@ body {
   display: inline-block;
   padding: 0 10px;
 }
-.header-menu .hiddenMenu {
-  display: none;
-}
 .header-menu ul li a {
   color: #000000;
   font-weight: 400;
@@ -404,7 +401,6 @@ body {
   background-color: #3e64ff;
   color: #fff;
   margin-right: 30px;
-  flex: 1;
 }
 .resume .item-body {
   border-bottom: 1px solid #999999;
@@ -688,31 +684,8 @@ h2,
   .footer {
     padding-top: 0 !important;
   }
-  .resume .categories {
-    width: 100%;
-    margin-bottom: 2rem;
-  }
-  .resume .categories .list {
-    display: grid;
-  }
-  .resume .categories .list li {
-    text-align: center;
-  }
-  .resume .categories .list li a {
-    font-size: 1.5rem;
-  }
   .header-menu {
-    display: none;
-    width: 100%;
-    transition: all 0.5s;
-    background-color: #333;
-    transform: translatey(-100%);
-    position: relative;
-  }
-  .hiddenMenu {
-    position: absolute;
-    top: 0;
-    right: 0;
+    display: none !important;
   }
   .header {
     justify-content: space-between;
@@ -723,36 +696,11 @@ h2,
   .text {
     justify-content: space-around;
   }
-  .resume {
-    display: block !important ;
-  }
   .item-list {
     width: 100% !important;
   }
   .mouse {
     display: none !important;
-  }
-  .menu-item {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
-  }
-  .hiddenMenu {
-    color: #fff;
-  }
-  .menu-item li {
-    padding: 10px 0 !important;
-  }
-  .technology {
-    display: none !important;
-  }
-  .menu-item li a span {
-    color: #fff;
-  }
-  .contact-img {
-    height: 100vh !important;
   }
 }
 @media (min-width: 1024px) {

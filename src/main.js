@@ -27,15 +27,19 @@ function start() {
   renderAboutMe();
   renderCategories();
   menuBar();
+
   education();
   experience();
   Awards();
+
+  renderPosts();
 }
 start();
 
 function renderHeader() {
   header.innerHTML = Header();
 }
+
 function menuBar() {
   const menuBar = document.querySelector(".header__menu-icon");
   const headerMenu = document.querySelector(".header-menu");
@@ -65,6 +69,7 @@ function menuBar() {
     }
   });
 }
+
 // render header
 function renderAboutMe() {
   const dataAboutMe = "http://localhost:3000/aboutMe";
