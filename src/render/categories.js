@@ -35,7 +35,7 @@ export const renderCategories = () => {
       const result = categories
         .map((category) => {
           return ` <li >
-          <a class="category-link "  href="/${category.name}"> ${category.name}</a>
+          <a class="category-link"  href="/${category.name}"> ${category.name}</a>
         </li>`;
         })
         .join("");

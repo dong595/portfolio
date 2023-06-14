@@ -10,16 +10,93 @@ import {
   categoriesBox,
   categories,
 } from "./render/categories";
-import { postContainer } from "./utilities";
+import { man2, postContainer } from "./utilities";
 import Awards from "./pages/Awards";
+import login from "./pages/login";
+import Register from "./pages/register";
+import admin from "./pages/admin/adminEducation";
+import add from "./pages/admin/addEducation";
+import update from "./pages/admin/updateEducation";
+import projects from "./render/projects";
+import projectDetail from "./pages/projectDetail";
+import adminExperience from "./pages/admin/adminExperience";
+import addExperience from "./pages/admin/addExperience";
+import adminPage from "./pages/admin/adminPage";
+import adminAwards from "./pages/admin/adminAwards";
+import updateAwards from "./pages/admin/updateAwards";
+import addAwards from "./pages/admin/addAwards";
+import Skills from "./pages/Skills";
+import adminMenu from "./pages/admin/adminMenu";
+import addMenu from "./pages/admin/addMenu";
+import updateMenu from "./pages/admin/updateMenu";
+import adminCategories from "./pages/admin/adminCategories";
+import updateCategories from "./pages/admin/updateCategories";
+import addCategories from "./pages/admin/addCategories";
+import addAbout from "./pages/admin/addAbout";
+import adminAbout from "./pages/admin/adminAbout";
+import updateAbout from "./pages/admin/updateAbout";
+import adminProjects from "./pages/admin/adminProjects";
+import addProjects from "./pages/admin/addProjects";
+import updateProjects from "./pages/admin/updateProjects";
 
 const header = document.querySelector(".header");
+const spanElement = document.getElementsByClassName("listCareer");
+const app = document.querySelector("#app");
+
 const router = new Navigo("/", { linksSelector: "a" });
 router.on("/education", () => render(education, postContainer));
 router.on("/experiences", () => render(experience, postContainer));
+router.on("/skills", () => render(Skills, postContainer));
 router.on("/awards", () => render(Awards, postContainer));
-const spanElement = document.getElementsByClassName("listCareer");
-const app = document.querySelector("#app");
+router.on("/login", () => render(login, man2));
+router.on("/register", () => render(Register, man2));
+router.on("/project/:id", ({ data }) =>
+  render(() => projectDetail(data), man2)
+);
+router.on("/admin", () => render(adminPage, man2));
+router.on("/admin/*", () => {}, {
+  before(next) {
+    const { user } = JSON.parse(localStorage.getItem("user")) || {};
+    if (!user) return (window.location.href = "/");
+    if (user && user.id != "2") return (window.location.href = "/login");
+    next();
+  },
+});
+router.on("/admin/adminMenu", () => render(adminMenu, man2));
+router.on("/admin/addMenu", () => render(addMenu, man2));
+router.on("/admin/:id/updateMenu", ({ data }) =>
+  render(() => updateMenu(data), man2)
+);
+router.on("/admin/adminAbout", () => render(adminAbout, man2));
+router.on("/admin/addAbout", () => render(addAbout, man2));
+router.on("/admin/:id/updateAbout", ({ data }) =>
+  render(() => updateAbout(data), man2)
+);
+router.on("/admin/adminCategories", () => render(adminCategories, man2));
+router.on("/admin/addCategories", () => render(addCategories, man2));
+router.on("/admin/:id/updateCategories", ({ data }) =>
+  render(() => updateCategories(data), man2)
+);
+router.on("/admin/adminEducation", () => render(admin, man2));
+router.on("/admin/addEducation", () => render(add, man2));
+router.on("/admin/:id/updateEducation", ({ data }) =>
+  render(() => update(data), man2)
+);
+router.on("/admin/adminExperience", () => render(adminExperience, man2));
+router.on("/admin/addExperience", () => render(addExperience, man2));
+router.on("/admin/:id/updateExperience", ({ data }) =>
+  render(() => update(data), man2)
+);
+router.on("/admin/adminAwards", () => render(adminAwards, man2));
+router.on("admin/addAwards", () => render(addAwards, man2));
+router.on("/admin/:id/updateAwards", ({ data }) =>
+  render(() => updateAwards(data), man2)
+);
+router.on("/admin/adminProjects", () => render(adminProjects, man2));
+router.on("admin/addProjects", () => render(addProjects, man2));
+router.on("/admin/:id/updateProjects", ({ data }) =>
+  render(() => updateProjects(data), man2)
+);
 function start() {
   renderHeader();
   slideHome();
@@ -27,12 +104,10 @@ function start() {
   renderAboutMe();
   renderCategories();
   menuBar();
-
+  projects();
   education();
   experience();
   Awards();
-
-  renderPosts();
 }
 start();
 
@@ -43,13 +118,12 @@ function renderHeader() {
 function menuBar() {
   const menuBar = document.querySelector(".header__menu-icon");
   const headerMenu = document.querySelector(".header-menu");
-  const headerLogo = document.querySelector(".header-logo");
-  const menuHidden = document.querySelector(".hiddenMenu");
-  const header = document.querySelector(".header");
+  headerMenu.style.transition = "all .5s";
+  menuBar.addEventListener("click", (e) => {
+    const headerLogo = document.querySelector(".header-logo");
+    const menuHidden = document.querySelector(".hiddenMenu");
+    const header = document.querySelector(".header");
 
-  headerMenu.classList.add("transition");
-
-  menuBar.addEventListener("click", () => {
     header.style.padding = "0";
     headerMenu.style.display = "block";
     headerMenu.style.marginTop = "auto";
@@ -57,16 +131,13 @@ function menuBar() {
     menuHidden.style.display = "block";
     menuBar.style.display = "none";
     headerLogo.style.display = "none";
-  });
-
-  document.addEventListener("click", (e) => {
-    if (e.target === menuHidden) {
+    menuHidden.addEventListener("click", () => {
       headerMenu.style.transform = "translatey(-100%)";
       menuBar.style.display = "block";
       headerLogo.style.display = "block";
       header.style.padding = "15px";
       headerMenu.style.marginTop = "0";
-    }
+    });
   });
 }
 
@@ -79,7 +150,7 @@ function renderAboutMe() {
     .then((data) => {
       const body = data.map((data) => {
         return `<div class="img-info  flex justify-center">
-        <div class="img">
+        <div class="img"style ="background-image: url(.${data.imgUrl})" >
         </div>
         <div class="info">
           <h2>About Me</h2>

@@ -1,4 +1,6 @@
 export const postContainer = document.querySelector(".item-list");
+export const man2 = document.querySelector(".man2");
+export const projectsItem = document.querySelector(".projects-item");
 
 // function useState(initialState) {
 //   let state = initialState;

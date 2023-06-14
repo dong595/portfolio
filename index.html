@@ -14,6 +14,11 @@
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
     <!-- <script
       src="https://kit.fontawesome.com/a076d05399.js"
       crossorigin="anonymous"
@@ -33,536 +38,496 @@
     <div id="app">
       <div class="container w-full mx-auto">
         <header class="header w-full bg-white"></header>
-        <div class="container">
-          <div class="home flex items-center justify-center flex-col bg-white">
-            <div class="overplay"></div>
-            <div class="home-text text-center">
-              <span> HEY ! I AM </span>
-              <h1>NGUYEN VAN DONG</h1>
-              <h2>I'm a <span></span></h2>
-            </div>
-            <div class="mouse">
-              <a href="#" class="mouse-icon">
-                <div class="mouse-wheel">
-                  <span class="arrow-round-down"></span>
-                </div>
-              </a>
+        <div class="man2">
+          <div class="container">
+            <div
+              id="home"
+              class="home flex items-center justify-center flex-col bg-white"
+            >
+              <div class="overplay"></div>
+              <div class="home-text text-center">
+                <span> HEY ! I AM </span>
+                <h1>NGUYEN VAN DONG</h1>
+                <h2>I'm a <span></span></h2>
+              </div>
+              <div class="mouse">
+                <a href="#" class="mouse-icon">
+                  <div class="mouse-wheel">
+                    <span class="arrow-round-down"></span>
+                  </div>
+                </a>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="container">
-          <div class="about-me h-fit"></div>
-        </div>
-        <div class="container pt-20">
-          <div class="resume w-full flex justify-around">
-            <div class="categories">
-              <ul class="list text-sky-300">
-                <!-- <li>
-                  <a class="category-link active" href="#"> education</a>
-                </li>
-                <li>
-                  <a class="category-link" href="#"> Experiences</a>
-                </li>
-                <li>
-                  <a class="category-link" href="#"> Skills</a>
-                </li>
-                <li>
-                  <a class="category-link" href="#"> Awards</a>
-                </li>
-              </ul>
-            </div>
+          <div class="container">
+            <div id="about" class="about-me h-fit"></div>
+          </div>
+          <div class="container pt-20">
+            <div id="resume" class="resume w-full flex justify-around">
+              <div class="categories">
+                <ul class="list text-sky-300">
+                  <li>
+                    <a class="category-link active" href="education">
+                      education</a
+                    >
+                  </li>
+                  <li>
+                    <a class="category-link" href="#"> Experiences</a>
+                  </li>
+                  <li>
+                    <a class="category-link" href="#"> Skills</a>
+                  </li>
+                  <li>
+                    <a class="category-link" href="#"> Awards</a>
+                  </li>
+                </ul>
+              </div>
 
-            <div class="item-list">
-              <!-- <div class="item">
-                <div class="item-body flex justify-center">
-                  <div class="item-icon text-5xl">
-                    <i class="fas fa-book-reader" style="font-size: 4rem"></i>
-                    <div></div>
-                  </div>
-                  <div class="item-text">
-                    <p class="item-years">2014-2015</p>
-                    <h3 class="item-name">
-                      Bachelor of Science in Computer Science
-                    </h3>
-                    <h4 class="item-position">Cambridge University</h4>
-                    <span class="item-des"
-                      >A small river named Duden flows by their place and
-                      supplies it with the necessary regelialia. It is a
-                      paradisematic country, in which roasted parts of sentences
-                      fly into your mouth.</span
-                    >
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="item-body flex justify-center">
-                  <div class="item-icon text-5xl">
-                    <i class="fas fa-book-reader" style="font-size: 4rem"></i>
-                    <div></div>
-                  </div>
-                  <div class="item-text">
-                    <p class="item-years">2014-2015</p>
-                    <h3 class="item-name">
-                      Computer Processing Systems/Computer Software
-                    </h3>
-                    <h4 class="item-position">Cambridge University</h4>
-                    <span class="item-des"
-                      >A small river named Duden flows by their place and
-                      supplies it with the necessary regelialia. It is a
-                      paradisematic country, in which roasted parts of sentences
-                      fly into your mouth.</span
-                    >
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="item-body flex justify-center">
-                  <div class="item-icon text-5xl">
-                    <i class="fas fa-book-reader" style="font-size: 4rem"></i>
-                    <div></div>
-                  </div>
-                  <div class="item-text">
-                    <p class="item-years">2014-2015</p>
-                    <h3 class="item-name">Diploma in Computer</h3>
-                    <h4 class="item-position">Cambridge University</h4>
-                    <span class="item-des"
-                      >A small river named Duden flows by their place and
-                      supplies it with the necessary regelialia. It is a
-                      paradisematic country, in which roasted parts of sentences
-                      fly into your mouth.</span
-                    >
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="item-body flex justify-center">
-                  <div class="item-icon text-5xl">
-                    <i class="fas fa-book-reader" style="font-size: 4rem"></i>
-                    <div></div>
-                  </div>
-                  <div class="item-text">
-                    <p class="item-years">2014-2015</p>
-                    <h3 class="item-name">Diploma in Computer</h3>
-                    <h4 class="item-position">Cambridge University</h4>
-                    <span class="item-des"
-                      >A small river named Duden flows by their place and
-                      supplies it with the necessary regelialia. It is a
-                      paradisematic country, in which roasted parts of sentences
-                      fly into your mouth.</span
-                    >
-                  </div>
-                </div>
-              </div> -->
+              <div class="item-list"></div>
             </div>
           </div>
-        </div>
-        <div class="container w-full mt-40 h-fit">
-          <div class="service flex justify-center items-center flex-col">
-            <div class="serviece-heading mb-10">
-              <h2 class="text-5xl font-bold">Services</h2>
-            </div>
-            <div class="serviece-des text-center">
-              <p class="mb-4 tracking-wide">
-                Far far away, behind the word mountains, far from the countries
-                Vokalia and Consonantia
-              </p>
-            </div>
+          <div class="container w-full mt-40 h-fit">
             <div
-              class="serviece-item grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-20 justify-items-center gap-x-5 gap-y-8"
+              id="services"
+              class="service flex justify-center items-center flex-col"
             >
-              <div class="item-s">
-                <div class="item-icon text-5xl">
-                  <i class="fas fa-flask" style="font-size: 3.5rem"></i>
-                </div>
-                <div class="item-heading">
-                  <h3>Photography</h3>
-                </div>
-                <div class="item-des">
-                  A small river named Duden flows by their place and supplies it
-                  with the necessary regelialia.
-                </div>
+              <div class="serviece-heading mb-10">
+                <h2 class="text-5xl font-bold">Services</h2>
               </div>
-              <div class="item-s">
-                <div class="item-icon text-5xl">
-                  <i class="fas fa-flask" style="font-size: 3.5rem"></i>
-                </div>
-                <div class="item-heading">
-                  <h3>Photography</h3>
-                </div>
-                <div class="item-des">
-                  A small river named Duden flows by their place and supplies it
-                  with the necessary regelialia.
-                </div>
-              </div>
-              <div class="item-s">
-                <div class="item-icon text-5xl">
-                  <i class="fa fa-laptop" style="font-size: 3.5rem"></i>
-                </div>
-                <div class="item-heading">
-                  <h3>Wed design</h3>
-                </div>
-                <div class="item-des">
-                  A small river named Duden flows by their place and supplies it
-                  with the necessary regelialia.
-                </div>
-              </div>
-              <div class="item-s">
-                <div class="item-icon text-5xl">
-                  <i class="fa fa-lightbulb-o" style="font-size: 3.5rem"></i>
-                </div>
-                <div class="item-heading">
-                  <h3>Wed design</h3>
-                </div>
-                <div class="item-des">
-                  A small river named Duden flows by their place and supplies it
-                  with the necessary regelialia.
-                </div>
-              </div>
-              <div class="item-s">
-                <div class="item-icon text-5xl">
-                  <i class="fa fa-server" style="font-size: 3.5rem"></i>
-                </div>
-                <div class="item-heading">
-                  <h3>Wed design</h3>
-                </div>
-                <div class="item-des">
-                  A small river named Duden flows by their place and supplies it
-                  with the necessary regelialia.
-                </div>
-              </div>
-              <div class="item-s">
-                <div class="item-icon text-5xl">
-                  <i class="fas fa-lightbulb" style="font-size: 3.5rem"></i>
-                </div>
-                <div class="item-heading">
-                  <h3>Wed design</h3>
-                </div>
-                <div class="item-des">
-                  A small river named Duden flows by their place and supplies it
-                  with the necessary regelialia.
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="container w-full mt-40 h-fit">
-          <div class="service flex justify-center items-center flex-col">
-            <div class="serviece-heading mb-10">
-              <h2 class="text-5xl font-bold">Projects</h2>
-            </div>
-            <div class="serviece-des text-center">
-              <p class="mb-4 tracking-wide">
-                Far far away, behind the word mountains, far from the countries
-                Vokalia and Consonantia
-              </p>
-            </div>
-            <div
-              class="serviece-item grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-20 justify-items-center gap-x-5 gap-y-8"
-            >
-              <div
-                class="item-s"
-                style="background-image: url(./img/work-1.jpg.webp)"
-              >
-                <div class="overplay"></div>
-                <div class="project-des">
-                  <h2>Branding &Illustration Design</h2>
-                  <p>Web desing</p>
-                </div>
-              </div>
-              <div
-                class="item-s"
-                style="background-image: url(./img/work-2.jpg.webp)"
-              >
-                <div class="overplay"></div>
-                <div class="project-des">
-                  <h2>Branding &Illustration Design</h2>
-                  <p>Web desing</p>
-                </div>
-              </div>
-              <div
-                class="item-s"
-                style="background-image: url(./img/work-3.jpg.webp)"
-              >
-                <div class="overplay"></div>
-                <div class="project-des">
-                  <h2>Branding &Illustration Design</h2>
-                  <p>Web desing</p>
-                </div>
-              </div>
-              <div
-                class="item-s"
-                style="background-image: url(./img/work-4.jpg.webp)"
-              >
-                <div class="overplay"></div>
-                <div class="project-des">
-                  <h2>Branding &Illustration Design</h2>
-                  <p>Web desing</p>
-                </div>
-              </div>
-              <div
-                class="item-s"
-                style="background-image: url(./img/work-5.jpg.webp)"
-              >
-                <div class="overplay"></div>
-                <div class="project-des">
-                  <h2>Branding &Illustration Design</h2>
-                  <p>Web desing</p>
-                </div>
-              </div>
-              <div
-                class="item-s"
-                style="background-image: url(./img/work-6.jpg.webp)"
-              >
-                <div class="overplay"></div>
-                <div class="project-des">
-                  <h2>Branding &Illustration Design</h2>
-                  <p>Web desing</p>
-                </div>
-              </div>
-            </div>
-            <div
-              class="serviece-item grid justify-items-center sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mt-20 justify-items-center gap-x-8"
-            >
-              <div
-                class="project-item mx-10 shadow-[0_0.5rem_1rem_rgba(0,0,0,0.15)]"
-              >
-                <div class="item-p w-96 h-36 flex justify-center items-center">
-                  <div class="p-text flex justify-center items-center flex-col">
-                    <h2 class="text-4xl font-semibold text-[#3e64ff]">100</h2>
-                    <p class="text-xl">Awards</p>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="project-item mx-10 shadow-[0_0.5rem_1rem_rgba(0,0,0,0.15)]"
-              >
-                <div class="item-p w-96 h-36 flex justify-center items-center">
-                  <div class="p-text flex justify-center items-center flex-col">
-                    <h2 class="text-4xl font-semibold text-[#3e64ff]">1,200</h2>
-                    <p class="text-xl">Complete Projects</p>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="project-item mx-10 shadow-[0_0.5rem_1rem_rgba(0,0,0,0.15)]"
-              >
-                <div class="item-p w-96 h-36 flex justify-center items-center">
-                  <div class="p-text flex justify-center items-center flex-col">
-                    <h2 class="text-4xl font-semibold text-[#3e64ff]">1,200</h2>
-                    <p class="text-xl">Happy Customers</p>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="project-item mx-10 shadow-[0_0.5rem_1rem_rgba(0,0,0,0.15)]"
-              >
-                <div class="item-p w-96 h-36 flex justify-center items-center">
-                  <div class="p-text flex justify-center items-center flex-col">
-                    <h2 class="text-4xl font-semibold text-[#3e64ff]">500</h2>
-                    <p class="text-xl">Cups of coffee</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          class="blog-item flex flex-col justify-center items-center mt-20 justify-items-center gap-y-8"
-        >
-          <div class="serviece-heading mb-10">
-            <h2 class="text-5xl font-bold">Blogs</h2>
-          </div>
-          <div
-            class="posts grid lg:grid-cols-3 sm:grid-cols-1 md:grid-cols-2 gap-x-5 justify-items-center"
-          >
-            <div class="post-item flex justify-center flex-col items-center">
-              <div
-                class="post-img"
-                style="background-image: url(./img/image_1.jpg.webp)"
-              ></div>
-              <div class="post-text">
-                <div class="post-title">
-                  <h2
-                    class="text-[#333] hover:text-[#3e64ff] font-semibold text-xl"
-                  >
-                    Why Lead Generation is Key for Business Growth
-                  </h2>
-                </div>
-                <div class="post-position text-lg font-semibold text-[#3e64ff]">
-                  <p>Sept. 12, 2019 Admin 3</p>
-                </div>
-                <div class="post-des text-[#999999]">
-                  <span
-                    >A small river named Duden flows by their place and supplies
-                    it with the necessary regelialia.</span
-                  >
-                </div>
-              </div>
-            </div>
-            <div class="post-item flex justify-center flex-col items-center">
-              <div
-                class="post-img"
-                style="background-image: url(./img/image_2.jpg.webp)"
-              ></div>
-              <div class="post-text">
-                <div class="post-title">
-                  <h2
-                    class="text-[#333] hover:text-[#3e64ff] font-semibold text-xl"
-                  >
-                    Why Lead Generation is Key for Business Growth
-                  </h2>
-                </div>
-                <div class="post-position text-lg font-semibold text-[#3e64ff]">
-                  <p>Sept. 12, 2019 Admin 3</p>
-                </div>
-                <div class="post-des text-[#999999]">
-                  <span
-                    >A small river named Duden flows by their place and supplies
-                    it with the necessary regelialia.</span
-                  >
-                </div>
-              </div>
-            </div>
-            <div class="post-item flex justify-center flex-col items-center">
-              <div
-                class="post-img"
-                style="background-image: url(./img/image_3.jpg.webp)"
-              ></div>
-              <div class="post-text">
-                <div class="post-title">
-                  <h2
-                    class="text-[#333] hover:text-[#3e64ff] font-semibold text-xl"
-                  >
-                    Why Lead Generation is Key for Business Growth
-                  </h2>
-                </div>
-                <div class="post-position text-lg font-semibold text-[#3e64ff]">
-                  <p>Sept. 12, 2019 Admin 3</p>
-                </div>
-                <div class="post-des text-[#999999]">
-                  <span
-                    >A small river named Duden flows by their place and supplies
-                    it with the necessary regelialia.</span
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            class="post-banner w-full h-64"
-            style="
-              background-image: url(./img/bg_1.jpg.webp);
-              position: relative;
-            "
-          >
-            <div
-              class="overplay flex flex-col justify-center items-center w-full h-full mt-0"
-            >
-              <div class="banner-title">
-                <h2 class="text-5xl font-semibold text-[#fff] opacity-100">
-                  I'm <span class="text-[#a0f669]">Available</span> for
-                  freelancing
-                </h2>
-              </div>
-              <div class="banner-des">
-                <p class="text-xl text-center text-[#fff] opacity-100">
-                  A small river named Duden flows by their place and supplies it
-                  with the necessary regelialia.
+              <div class="serviece-des text-center">
+                <p class="mb-4 tracking-wide">
+                  Far far away, behind the word mountains, far from the
+                  countries Vokalia and Consonantia
                 </p>
               </div>
-              <div class="banner-btn">
-                <button class="text-btn pb-10 mb-2 text-center opacity-100">
-                  Here Me
+              <div
+                class="serviece-item grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-20 justify-items-center gap-x-5 gap-y-8"
+              >
+                <div class="item-s">
+                  <div class="item-icon text-5xl">
+                    <i class="fas fa-flask" style="font-size: 3.5rem"></i>
+                  </div>
+                  <div class="item-heading">
+                    <h3>Photography</h3>
+                  </div>
+                  <div class="item-des">
+                    A small river named Duden flows by their place and supplies
+                    it with the necessary regelialia.
+                  </div>
+                </div>
+                <div class="item-s">
+                  <div class="item-icon text-5xl">
+                    <i class="fas fa-flask" style="font-size: 3.5rem"></i>
+                  </div>
+                  <div class="item-heading">
+                    <h3>Photography</h3>
+                  </div>
+                  <div class="item-des">
+                    A small river named Duden flows by their place and supplies
+                    it with the necessary regelialia.
+                  </div>
+                </div>
+                <div class="item-s">
+                  <div class="item-icon text-5xl">
+                    <i class="fa fa-laptop" style="font-size: 3.5rem"></i>
+                  </div>
+                  <div class="item-heading">
+                    <h3>Wed design</h3>
+                  </div>
+                  <div class="item-des">
+                    A small river named Duden flows by their place and supplies
+                    it with the necessary regelialia.
+                  </div>
+                </div>
+                <div class="item-s">
+                  <div class="item-icon text-5xl">
+                    <i class="fa fa-lightbulb-o" style="font-size: 3.5rem"></i>
+                  </div>
+                  <div class="item-heading">
+                    <h3>Wed design</h3>
+                  </div>
+                  <div class="item-des">
+                    A small river named Duden flows by their place and supplies
+                    it with the necessary regelialia.
+                  </div>
+                </div>
+                <div class="item-s">
+                  <div class="item-icon text-5xl">
+                    <i class="fa fa-server" style="font-size: 3.5rem"></i>
+                  </div>
+                  <div class="item-heading">
+                    <h3>Wed design</h3>
+                  </div>
+                  <div class="item-des">
+                    A small river named Duden flows by their place and supplies
+                    it with the necessary regelialia.
+                  </div>
+                </div>
+                <div class="item-s">
+                  <div class="item-icon text-5xl">
+                    <i class="fas fa-lightbulb" style="font-size: 3.5rem"></i>
+                  </div>
+                  <div class="item-heading">
+                    <h3>Wed design</h3>
+                  </div>
+                  <div class="item-des">
+                    A small river named Duden flows by their place and supplies
+                    it with the necessary regelialia.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container w-full mt-40 h-fit">
+            <div
+              id="projects"
+              class="service flex justify-center items-center flex-col"
+            >
+              <div class="serviece-heading mb-10">
+                <h2 class="text-5xl font-bold">Projects</h2>
+              </div>
+              <div class="serviece-des text-center">
+                <p class="mb-4 tracking-wide">
+                  Far far away, behind the word mountains, far from the
+                  countries Vokalia and Consonantia
+                </p>
+              </div>
+              <div
+                class="serviece-item projects-item grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-20 justify-items-center gap-x-5 gap-y-8"
+              >
+                <div
+                  class="item-s"
+                  style="background-image: url(./img/work-1.jpg.webp)"
+                >
+                  <div class="overplay"></div>
+                  <div class="project-des">
+                    <h2>Branding &Illustration Design</h2>
+                    <p>Web desing</p>
+                  </div>
+                </div>
+                <div
+                  class="item-s"
+                  style="background-image: url(./img/work-2.jpg.webp)"
+                >
+                  <div class="overplay"></div>
+                  <div class="project-des">
+                    <h2>Branding &Illustration Design</h2>
+                    <p>Web desing</p>
+                  </div>
+                </div>
+                <div
+                  class="item-s"
+                  style="background-image: url(./img/work-3.jpg.webp)"
+                >
+                  <div class="overplay"></div>
+                  <div class="project-des">
+                    <h2>Branding &Illustration Design</h2>
+                    <p>Web desing</p>
+                  </div>
+                </div>
+                <div
+                  class="item-s"
+                  style="background-image: url(./img/work-4.jpg.webp)"
+                >
+                  <div class="overplay"></div>
+                  <div class="project-des">
+                    <h2>Branding &Illustration Design</h2>
+                    <p>Web desing</p>
+                  </div>
+                </div>
+                <div
+                  class="item-s"
+                  style="background-image: url(./img/work-5.jpg.webp)"
+                >
+                  <div class="overplay"></div>
+                  <div class="project-des">
+                    <h2>Branding &Illustration Design</h2>
+                    <p>Web desing</p>
+                  </div>
+                </div>
+                <div
+                  class="item-s"
+                  style="background-image: url(./img/work-6.jpg.webp)"
+                >
+                  <div class="overplay"></div>
+                  <div class="project-des">
+                    <h2>Branding &Illustration Design</h2>
+                    <p>Web desing</p>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="serviece-item grid justify-items-center sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mt-20 justify-items-center gap-x-8"
+              >
+                <div
+                  class="project-item mx-10 shadow-[0_0.5rem_1rem_rgba(0,0,0,0.15)]"
+                >
+                  <div
+                    class="item-p w-96 h-36 flex justify-center items-center"
+                  >
+                    <div
+                      class="p-text flex justify-center items-center flex-col"
+                    >
+                      <h2 class="text-4xl font-semibold text-[#3e64ff]">100</h2>
+                      <p class="text-xl">Awards</p>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="project-item mx-10 shadow-[0_0.5rem_1rem_rgba(0,0,0,0.15)]"
+                >
+                  <div
+                    class="item-p w-96 h-36 flex justify-center items-center"
+                  >
+                    <div
+                      class="p-text flex justify-center items-center flex-col"
+                    >
+                      <h2 class="text-4xl font-semibold text-[#3e64ff]">
+                        1,200
+                      </h2>
+                      <p class="text-xl">Complete Projects</p>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="project-item mx-10 shadow-[0_0.5rem_1rem_rgba(0,0,0,0.15)]"
+                >
+                  <div
+                    class="item-p w-96 h-36 flex justify-center items-center"
+                  >
+                    <div
+                      class="p-text flex justify-center items-center flex-col"
+                    >
+                      <h2 class="text-4xl font-semibold text-[#3e64ff]">
+                        1,200
+                      </h2>
+                      <p class="text-xl">Happy Customers</p>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="project-item mx-10 shadow-[0_0.5rem_1rem_rgba(0,0,0,0.15)]"
+                >
+                  <div
+                    class="item-p w-96 h-36 flex justify-center items-center"
+                  >
+                    <div
+                      class="p-text flex justify-center items-center flex-col"
+                    >
+                      <h2 class="text-4xl font-semibold text-[#3e64ff]">500</h2>
+                      <p class="text-xl">Cups of coffee</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            id="blog"
+            class="blog-item flex flex-col justify-center items-center mt-20 justify-items-center gap-y-8"
+          >
+            <div class="serviece-heading mb-10">
+              <h2 class="text-5xl font-bold">Blogs</h2>
+            </div>
+            <div
+              class="posts grid lg:grid-cols-3 sm:grid-cols-1 md:grid-cols-2 gap-x-5 justify-items-center"
+            >
+              <div class="post-item flex justify-center flex-col items-center">
+                <div
+                  class="post-img"
+                  style="background-image: url(./img/image_1.jpg.webp)"
+                ></div>
+                <div class="post-text">
+                  <div class="post-title">
+                    <h2
+                      class="text-[#333] hover:text-[#3e64ff] font-semibold text-xl"
+                    >
+                      Why Lead Generation is Key for Business Growth
+                    </h2>
+                  </div>
+                  <div
+                    class="post-position text-lg font-semibold text-[#3e64ff]"
+                  >
+                    <p>Sept. 12, 2019 Admin 3</p>
+                  </div>
+                  <div class="post-des text-[#999999]">
+                    <span
+                      >A small river named Duden flows by their place and
+                      supplies it with the necessary regelialia.</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="post-item flex justify-center flex-col items-center">
+                <div
+                  class="post-img"
+                  style="background-image: url(./img/image_2.jpg.webp)"
+                ></div>
+                <div class="post-text">
+                  <div class="post-title">
+                    <h2
+                      class="text-[#333] hover:text-[#3e64ff] font-semibold text-xl"
+                    >
+                      Why Lead Generation is Key for Business Growth
+                    </h2>
+                  </div>
+                  <div
+                    class="post-position text-lg font-semibold text-[#3e64ff]"
+                  >
+                    <p>Sept. 12, 2019 Admin 3</p>
+                  </div>
+                  <div class="post-des text-[#999999]">
+                    <span
+                      >A small river named Duden flows by their place and
+                      supplies it with the necessary regelialia.</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="post-item flex justify-center flex-col items-center">
+                <div
+                  class="post-img"
+                  style="background-image: url(./img/image_3.jpg.webp)"
+                ></div>
+                <div class="post-text">
+                  <div class="post-title">
+                    <h2
+                      class="text-[#333] hover:text-[#3e64ff] font-semibold text-xl"
+                    >
+                      Why Lead Generation is Key for Business Growth
+                    </h2>
+                  </div>
+                  <div
+                    class="post-position text-lg font-semibold text-[#3e64ff]"
+                  >
+                    <p>Sept. 12, 2019 Admin 3</p>
+                  </div>
+                  <div class="post-des text-[#999999]">
+                    <span
+                      >A small river named Duden flows by their place and
+                      supplies it with the necessary regelialia.</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="post-banner w-full h-64"
+              style="
+                background-image: url(./img/bg_1.jpg.webp);
+                position: relative;
+              "
+            >
+              <div
+                class="overplay flex flex-col justify-center items-center w-full h-full mt-0"
+              >
+                <div class="banner-title">
+                  <h2 class="text-5xl font-semibold text-[#fff] opacity-100">
+                    I'm <span class="text-[#a0f669]">Available</span> for
+                    freelancing
+                  </h2>
+                </div>
+                <div class="banner-des">
+                  <p class="text-xl text text-[#fff] opacity-100">
+                    A small river named Duden flows by their place and supplies
+                    it with the necessary regelialia.
+                  </p>
+                </div>
+                <div class="banner-btn">
+                  <button class="text-btn pb-10 mb-2 text-center opacity-100">
+                    Here Me
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container w-full mt-40 h-fit">
+            <div class="service flex justify-center items-center flex-col">
+              <div class="serviece-heading mb-10">
+                <h2 class="text-5xl font-bold">Contact Me</h2>
+              </div>
+              <div class="serviece-des text-center">
+                <p class="mb-4 tracking-wide">
+                  Far far away, behind the word mountains, far from the
+                  countries Vokalia and Consonantia
+                </p>
+              </div>
+            </div>
+            <div
+              class="contact-item grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mt-20 justify-items-center gap-x-5 gap-y-8"
+            >
+              <div class="item-c hover-none">
+                <div class="item-icon bd text-5xl">
+                  <i class="fas fa-location-arrow" style="font-size: 3rem"></i>
+                </div>
+                <div class="item-heading after-none">
+                  <h3 class="font-black">Wed design</h3>
+                </div>
+                <div class="item-des text-sm">
+                  A small river named Duden flows by their place and supplies it
+                  with the necessary regelialia.
+                </div>
+              </div>
+              <div class="item-c hover-none">
+                <div class="item-icon bd text-5xl">
+                  <i class="fa fa-phone" style="font-size: 3rem"></i>
+                </div>
+                <div class="item-heading after-none">
+                  <h3 class="font-black">Wed design</h3>
+                </div>
+                <div class="item-des text-sm">
+                  A small river named Duden flows by their place and supplies it
+                  with the necessary regelialia.
+                </div>
+              </div>
+              <div class="item-c hover-none">
+                <div class="item-icon bd text-5xl">
+                  <i class="fa fa-address-card-o" style="font-size: 3rem"></i>
+                </div>
+                <div class="item-heading after-none">
+                  <h3 class="font-black">Wed design</h3>
+                </div>
+                <div class="item-des text-sm">
+                  A small river named Duden flows by their place and supplies it
+                  with the necessary regelialia.
+                </div>
+              </div>
+              <div class="item-c hover-none">
+                <div class="item-icon bd text-5xl">
+                  <i class="fa fa-globe" style="font-size: 3rem"></i>
+                </div>
+                <div class="item-heading after-none">
+                  <h3 class="font-black">Wed design</h3>
+                </div>
+                <div class="item-des text-sm">
+                  A small river named Duden flows by their place and supplies it
+                  with the necessary regelialia.
+                </div>
+              </div>
+            </div>
+            <div
+              id="contact"
+              class="contact-item w-full h-fit grid md:grid-cols-1 mt-10 lg:grid-cols-2 justify-items-center gap-y-8"
+            >
+              <div class="contact-img"></div>
+              <div
+                class="contact-form w-full flex flex-col justify-center items-center"
+              >
+                <input type="text" placeholder="Your name" />
+                <input type="text" placeholder="Your email" />
+                <input type="text" placeholder="subject" />
+                <textarea
+                  name=""
+                  id=""
+                  cols="90"
+                  rows="15"
+                  placeholder="Message"
+                ></textarea>
+                <button class="text-btn pb-10 mb-2 text-center">
+                  Send Message
                 </button>
               </div>
-            </div>
-          </div>
-        </div>
-        <div class="container w-full mt-40 h-fit">
-          <div class="service flex justify-center items-center flex-col">
-            <div class="serviece-heading mb-10">
-              <h2 class="text-5xl font-bold">Contact Me</h2>
-            </div>
-            <div class="serviece-des text-center">
-              <p class="mb-4 tracking-wide">
-                Far far away, behind the word mountains, far from the countries
-                Vokalia and Consonantia
-              </p>
-            </div>
-          </div>
-          <div
-            class="contact-item grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mt-20 justify-items-center gap-x-5 gap-y-8"
-          >
-            <div class="item-c hover-none">
-              <div class="item-icon bd text-5xl">
-                <i class="fas fa-location-arrow" style="font-size: 3rem"></i>
-              </div>
-              <div class="item-heading after-none">
-                <h3 class="font-black">Wed design</h3>
-              </div>
-              <div class="item-des text-sm">
-                A small river named Duden flows by their place and supplies it
-                with the necessary regelialia.
-              </div>
-            </div>
-            <div class="item-c hover-none">
-              <div class="item-icon bd text-5xl">
-                <i class="fa fa-phone" style="font-size: 3rem"></i>
-              </div>
-              <div class="item-heading after-none">
-                <h3 class="font-black">Wed design</h3>
-              </div>
-              <div class="item-des text-sm">
-                A small river named Duden flows by their place and supplies it
-                with the necessary regelialia.
-              </div>
-            </div>
-            <div class="item-c hover-none">
-              <div class="item-icon bd text-5xl">
-                <i class="fa fa-address-card-o" style="font-size: 3rem"></i>
-              </div>
-              <div class="item-heading after-none">
-                <h3 class="font-black">Wed design</h3>
-              </div>
-              <div class="item-des text-sm">
-                A small river named Duden flows by their place and supplies it
-                with the necessary regelialia.
-              </div>
-            </div>
-            <div class="item-c hover-none">
-              <div class="item-icon bd text-5xl">
-                <i class="fa fa-globe" style="font-size: 3rem"></i>
-              </div>
-              <div class="item-heading after-none">
-                <h3 class="font-black">Wed design</h3>
-              </div>
-              <div class="item-des text-sm">
-                A small river named Duden flows by their place and supplies it
-                with the necessary regelialia.
-              </div>
-            </div>
-          </div>
-          <div
-            class="contact-item w-full h-fit grid md:grid-cols-1 mt-10 lg:grid-cols-2 justify-items-center gap-y-8"
-          >
-            <div class="contact-img"></div>
-            <div
-              class="contact-form w-full flex flex-col justify-center items-center"
-            >
-              <input type="text" placeholder="Your name" />
-              <input type="text" placeholder="Your email" />
-              <input type="text" placeholder="subject" />
-              <textarea
-                name=""
-                id=""
-                cols="90"
-                rows="15"
-                placeholder="Message"
-              ></textarea>
-              <button class="text-btn pb-10 mb-2 text-center">
-                Send Message
-              </button>
             </div>
           </div>
         </div>
@@ -637,7 +602,6 @@
         </div>
       </div>
     </div>
-
     <script type="module" src="./src/main.js"></script>
     <script type="module" src="./src/pages/Education.js"></script>
     <!-- <script type="module" src="./src/render/categories.js"></script> -->

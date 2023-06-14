@@ -1,21 +1,50 @@
 {
+  "menu": [
+    {
+      "name": "Home",
+      "id": 1
+    },
+    {
+      "name": "About",
+      "id": 2
+    },
+    {
+      "name": "Resume",
+      "id": 3
+    },
+    {
+      "name": "Services",
+      "id": 4
+    },
+    {
+      "name": "Projects",
+      "id": 5
+    },
+    {
+      "name": "Blog",
+      "id": 6
+    },
+    {
+      "id": 7,
+      "name": "Contact"
+    }
+  ],
   "aboutMe": [
     {
-      "id": 28,
+      "id": 1,
       "name": "Nguyen Van Dong",
       "location": "Thanh Ne - Thanh Binh - Chuong My - Ha Noi",
       "date": "28-02-2003",
       "zipCode": 90000,
       "email": "binz2028@gmail.com",
       "phoneNumber": "0978964593",
-      "imgUrl": "IMG_0880.JPG"
+      "imgUrl": "./img/IMG_0880.JPG"
     }
   ],
   "categories": [
     {
-      "id": 1,
       "name": "education",
-      "productId": 1
+      "id": 1
     },
     {
       "name": "experiences",
@@ -104,6 +133,7 @@
       "id": 6
     }
   ],
+  "Skills": [{}],
   "Awards": [
     {
       "name": "Top 10 Web Developer",
@@ -132,6 +162,103 @@
       "position": "Cambridge University",
       "year": "2014-2015",
       "id": 4
+    }
+  ],
+  "categoryProjects": [
+    {
+      "id": 1,
+      "name": "Art & Creative Director"
+    },
+    {
+      "id": 2,
+      "name": "Bachelor of Science in Computer Science"
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "name": "Dự án mẫu",
+      "technologies": "HTML & CSS, PHP, javascript",
+      "people": 1,
+      "github": "https://github.com/dong595/du-an-mau",
+      "image": "./img/duanmau.jpg",
+      "role": "fullstack",
+      "time": "28-12-2022 to 28-02-2023",
+      "categoryId": 1
+    },
+    {
+      "id": 2,
+      "name": "portfolio",
+      "technologies": "HTML & CSS, javascript, ecmascript 6, github",
+      "people": 1,
+      "github": "https://github.com/dong595/portfolio",
+      "image": "./img/portfolio.png",
+      "role": "fullstack",
+      "time": "05-05-2023 to 05-06-2023",
+      "categoryId": 2
+    },
+    {
+      "id": 3,
+      "name": "Dự án 1",
+      "technologies": "HTML & CSS, PHP, javascript, ecmascript 6, github, laravel",
+      "people": 6,
+      "github": "https://github.com/dong595/portfolio",
+      "image": "./img/duan1.png",
+      "role": "frontend",
+      "time": "28-02-2022 to 28-04-2023",
+      "categoryId": 1
+    }
+  ],
+  "users": [
+    {
+      "email": "dongnvph28919@fpt.edu.vn",
+      "password": "donglol01",
+      "id": 1
+    },
+    {
+      "email": "abc@fpt.edu.vn",
+      "password": "$2a$10$AEnjvxvQHxZdCOZ1wiRdz.9gmEde5Kyh/9u4Db2SwgZUuAKqTZsdu",
+      "id": 2
+    },
+    {
+      "email": "binz2028@gmail.com",
+      "password": "$2a$10$3/PRZUcRAFxz/WNlL5wSnurNdFfDNU7c.b74oe6Pr0Bdpto1ClRAi",
+      "id": 3
+    },
+    {
+      "email": "admin@gmail.com",
+      "password": "$2a$10$.5JUJaALxaoz8gDFijaKyuVBF5Z09.xiF1kkkleHxppSWVddml77a",
+      "id": 4
+    },
+    {
+      "email": "cc@gmail.com",
+      "password": "$2a$10$Z/Dvm7xLjkSXUIB8CWl1oezWBRZXJcyD7W6pprYIJz8EYIYbX.lvu",
+      "id": 5
+    },
+    {
+      "email": "aaa@gmail.com",
+      "password": "$2a$10$CsR9o4kyPDDdvzRk6nRXYOun0mCqgqXNd3jf4XfofNTWSYjT0c9YO",
+      "id": 6
+    },
+    {
+      "email": "admin1@gmail.com",
+      "password": "$2a$10$rHKF3vnHDBtMjcMOKawUD.Uw2pEo0RHqtVPWVy3tTq7qsdjydV4XK",
+      "id": 7
+    },
+    {
+      "email": "luong@gmail.com",
+      "password": "$2a$10$0lamNEWpXNgndQDrN19fLu5upC388CZH0w8desjw/CqqniobQIQ3W",
+      "id": 8
+    },
+    {
+      "email": "s@gmail.com",
+      "password": "$2a$10$vP/Xa1VmZB9beLDLjyku4.bpNtY7GDVXmURkDd9awZEu2iV4iLOvO",
+      "id": 9
+    },
+    {
+      "email": "abc1@fpt.edu.vn",
+      "password": "$2a$10$T0fc1sYCSdSEdAr41cp3qeTz4ycvQdKtUwhtcZyLl6BHuWqJH3U9C",
+      "id": 10
     }
   ]
 }
