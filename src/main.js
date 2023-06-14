@@ -1,6 +1,6 @@
 import { myCareers } from "./data";
 import { Header, renderMenu } from "./components/Header";
-import { render } from "./lib/index";
+import { render, router } from "./lib/index";
 import notFound from "./pages/notFound";
 import Navigo from "navigo";
 import education from "./pages/Education";
@@ -43,7 +43,6 @@ const header = document.querySelector(".header");
 const spanElement = document.getElementsByClassName("listCareer");
 const app = document.querySelector("#app");
 
-const router = new Navigo("/", { linksSelector: "a" });
 router.on("/education", () => render(education, postContainer));
 router.on("/experiences", () => render(experience, postContainer));
 router.on("/skills", () => render(Skills, postContainer));

@@ -182,7 +182,7 @@
       "people": 1,
       "github": "https://github.com/dong595/du-an-mau",
       "image": "./img/duanmau.jpg",
-      "role": "fullstack",
+      "role": "Backend",
       "time": "28-12-2022 to 28-02-2023",
       "categoryId": 1
     },
@@ -193,7 +193,7 @@
       "people": 1,
       "github": "https://github.com/dong595/portfolio",
       "image": "./img/portfolio.png",
-      "role": "fullstack",
+      "role": "Frontend",
       "time": "05-05-2023 to 05-06-2023",
       "categoryId": 2
     },
@@ -204,7 +204,7 @@
       "people": 6,
       "github": "https://github.com/dong595/portfolio",
       "image": "./img/duan1.png",
-      "role": "frontend",
+      "role": "Frontend",
       "time": "28-02-2022 to 28-04-2023",
       "categoryId": 1
     }

@@ -22,6 +22,8 @@ const updateProjects = ({ id }) => {
         people: document.getElementById("people").value,
         github: document.getElementById("github").value,
         image: document.getElementById("image").value,
+        role: document.getElementById("role").value,
+        time: document.getElementById("time").value,
       };
       fetch(api + "/" + id, {
         method: "PUT",
@@ -61,6 +63,14 @@ const updateProjects = ({ id }) => {
       <label class = "uppercase text-[#3e64ff] " for="">image</label> <br>
   <input id value=${product.image} = "image" class = "pt-2 border-solid pl-2 bg-white w-72 h-12 text-xl text-[#3e64ff] outline-0 border border-[#3e64ff] rounded my-3 " type="text">
   </div>
+  <div class = "">
+  <label class = "uppercase text-[#3e64ff] " for="">role</label> <br>
+<input id value=${product.role} = "role" class = "pt-2 border-solid pl-2 bg-white w-72 h-12 text-xl text-[#3e64ff] outline-0 border border-[#3e64ff] rounded my-3 " type="text">
+</div>
+<div class = "">
+<label class = "uppercase text-[#3e64ff] " for="">time</label> <br>
+<input id value=${product.time} = "time" class = "pt-2 border-solid pl-2 bg-white w-72 h-12 text-xl text-[#3e64ff] outline-0 border border-[#3e64ff] rounded my-3 " type="text">
+</div>
       <button type = "submit" class = "text-btn">ADD</button>
   </form>
   </div>

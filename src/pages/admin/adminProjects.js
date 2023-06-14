@@ -38,6 +38,8 @@ const adminProjects = () => {
               <th class = "border text-center border-slate-600 uppercase text-xl text-[#333] " style = "min-width:40px">people</th>
               <th class = "border text-center border-slate-600 uppercase text-xl text-[#333] " style = "min-width:40px">github</th>
               <th class = "border text-center border-slate-600 uppercase text-xl text-[#333] " style = "min-width:40px">image</th>
+              <th class = "border text-center border-slate-600 uppercase text-xl text-[#333] " style = "min-width:40px">role</th>
+              <th class = "border text-center border-slate-600 uppercase text-xl text-[#333] " style = "min-width:40px">time</th>
               <th class = "border text-center border-slate-600 uppercase text-xl text-[#333] " style = "min-width:40px">Action</th>
           </tr>
       </thead>
@@ -82,7 +84,18 @@ ${products
      >
        ${product.image}
      </td>
-  
+     <td
+     class="text-center border border-slate-300 "
+     style=" min-width:40px"
+   >
+     ${product.role}
+   </td>
+   <td
+   class="text-center border border-slate-300 "
+   style=" min-width:40px"
+ >
+   ${product.time}
+ </td>
   
      <td class="flex flex-col items-center border border-slate-300">
        <a

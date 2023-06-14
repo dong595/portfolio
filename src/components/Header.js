@@ -23,9 +23,17 @@ function renderMenu() {
   fetch(api)
     .then((response) => response.json())
     .then((datas) => {
+      const aElement = document.querySelectorAll(".actives");
+      aElement.forEach((link) => {
+        link.addEventListener("click", (event) => {
+          event.preventDefault(); // Prevent the default behavior of the anchor tag
+          const href = event.target.getAttribute("href");
+          window.location.href = href.replace("#/", "/"); // Update the URL to remove the extra '#' symbol
+        });
+      });
       const result = datas
         .map((data) => {
-          return `<li data-menu='${data.id}' ><a class="active" src"#${data.name}"><span>${data.name}</span></a></li>`;
+          return `<li data-menu='${data.id}' ><a class="active" href="/#/${data.name}"><span>${data.name}</span></a></li>`;
         })
         .join("");
       headerMenuItem.innerHTML = result;
