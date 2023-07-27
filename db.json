@@ -38,7 +38,7 @@
       "zipCode": 90000,
       "email": "binz2028@gmail.com",
       "phoneNumber": "0978964593",
-      "imgUrl": "./img/IMG_0880.JPG"
+      "imgUrl": "../img/IMG_0880.JPG"
     }
   ],
   "categories": [
@@ -181,7 +181,7 @@
       "technologies": "HTML & CSS, PHP, javascript",
       "people": 1,
       "github": "https://github.com/dong595/du-an-mau",
-      "image": "./img/duanmau.jpg",
+      "image": "../img/duanmau.jpg",
       "role": "Backend",
       "time": "28-12-2022 to 28-02-2023",
       "categoryId": 1
@@ -192,7 +192,7 @@
       "technologies": "HTML & CSS, javascript, ecmascript 6, github",
       "people": 1,
       "github": "https://github.com/dong595/portfolio",
-      "image": "./img/portfolio.png",
+      "image": "../img/portfolio.png",
       "role": "Frontend",
       "time": "05-05-2023 to 05-06-2023",
       "categoryId": 2
@@ -203,7 +203,7 @@
       "technologies": "HTML & CSS, PHP, javascript, ecmascript 6, github, laravel",
       "people": 6,
       "github": "https://github.com/dong595/portfolio",
-      "image": "./img/duan1.png",
+      "image": "../img/duan1.png",
       "role": "Frontend",
       "time": "28-02-2022 to 28-04-2023",
       "categoryId": 1

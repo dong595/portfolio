@@ -149,7 +149,7 @@ function renderAboutMe() {
     .then((data) => {
       const body = data.map((data) => {
         return `<div class="img-info  flex justify-center">
-        <div class="img"style ="background-image: url(.${data.imgUrl})" >
+        <div class="img"style ="background-image: url(${data.imgUrl})" >
         </div>
         <div class="info">
           <h2>About Me</h2>
